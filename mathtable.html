@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Flashcard Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="game-container">
+    <div id="question" class="flashcard"></div>
+    <input type="number" id="answer" placeholder="Your answer">
+    <button id="check-answer">Check Answer</button>
+    <div id="feedback" class="feedback"></div>
+    <div id="adjective" class="adjective"></div>
+    <div id="score" class="score">Score: <span id="score-value">0</span></div>
+    <button onclick="nextCard()">Next Question</button>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black; /* Set background color to black */
+    color: white; /* Ensure text is visible on black background */
+    font-style: italic; /* Apply italics to the entire body */
+}
+
+.game-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.flashcard {
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: linear-gradient(145deg, #ff9a8b, #ff6a88); /* Soft gradient background */
+    color: white; /* Text color */
+    border-radius: 15px; /* Rounder corners for a smoother look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add transition effects */
+}
+
+.flashcard:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+input {
+    padding: 12px;
+    font-size: 1.2em;
+    width: 120px;
+    margin-bottom: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #ff9a8b, #ff6a88); /* Soft gradient background */
+    color: white;
+    text-align: center;
+    transition: background 0.3s ease, border 0.3s ease;
+}
+
+input:focus {
+    background: linear-gradient(145deg, #ff6a88, #ff9a8b); /* Reverse gradient for focus */
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    background: linear-gradient(145deg, #ff9a8b, #ff6a88); /* Same as question button color */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #ff6a88, #ff9a8b); /* Hover effect for button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.feedback {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.score {
+    font-size: 1.5em;
+    margin-top: 30px; /* Add margin to separate from adjective */
+    color: blue; /* Display score in blue */
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.celebration {
+    font-size: 2em;
+    color: gold;
+    position: relative;
+    margin-top: 10px;
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(360deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(720deg);
+    }
+}
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffd700, #ff6347);
+    animation: sparkle 1.5s infinite;
+    pointer-events: none; /* Prevent sparkles from interfering with other elements */
+}
+
+.adjective {
+    font-weight: bold; /* Make the adjective bold */
+    font-size: 1.2em;
+    margin-top: 20px; /* Space between adjective and score */
+    transition: color 0.3s ease; /* Smooth color transition for adjectives */
+}
